@@ -1,2 +1,18 @@
+// ### Get Max
+
+// The code in get-max.js also works! But it's a complete mess. Using proper
+// indentation, and better variable names, refactor this code so that a person
+// can understand what it does!
+
+// Make sure it's still passing all of its tests when you're done!
+
 // YOUR CODE BELOW
-function getMax(f, s, a) {if (f > s) {if (f > a) {return f;} return a;} else if (s > a) {return s;}else {return a;}}
+const getMax = (first, second, third) => {
+    if (first > second && first > third) {
+        return first;
+    } 
+    if (second > first && second > third) {
+        return second;
+    } 
+    return third;
+}

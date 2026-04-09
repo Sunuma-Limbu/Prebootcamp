@@ -1,18 +1,29 @@
+// ### Just in Camel Case
+
+// The code in just-in-camel-case.js also works! But it it looks like the well-
+// meaning developer who wrote it didn't use camel case when defining the
+// variables!
+
+// Fix this, but don't forget to make sure all of the tests are still
+// passing when you're done.
+
 // YOUR CODE BELOW
-function justInCamelCase(undername) {
-  let camelcaseoutput = "";
-    let foundunder = false;
-    for(let i = 0; i<undername.length; i++) {
-    if (undername[i] === "_") {
-      foundunder = true;
-      } else {
-        if (foundunder) {
-        camelcaseoutput += undername[i].toUpperCase();
-      foundunder = false;
+function justInCamelCase(underName) {
+  let camelCaseOutput = '';
+  let foundUnder = false;
+
+  for(let i = 0; i<underName.length; i++) {
+    if (underName[i] === '_') {
+      foundUnder = true;
     } else {
-      camelcaseoutput += undername[i];
+      if (foundUnder) {
+        camelCaseOutput += underName[i].toUpperCase();
+        foundUnder = false;
+      } else {
+        camelCaseOutput += underName[i];
       }
+    }
+
   }
-  }
-      return camelcaseoutput;
+  return camelCaseOutput;
 }
