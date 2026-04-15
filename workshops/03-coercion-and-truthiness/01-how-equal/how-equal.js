@@ -9,3 +9,10 @@ const howEqual = (arg1, arg2) => {
         return 'not equal'
     }
 }
+
+console.log({} == true)
+if ({}) {
+    console.log('I am true value')
+} else {
+    console.log('I am false')
+}

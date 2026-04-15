@@ -15,13 +15,16 @@ const onlyOdds = (n) =>{
     if(n < 1) return 0;
 
     let sum = 0;
-
-    for (let i = 1; i <= n; i++){
+    let i = 1;
+    for (console.log('hello world'); i <= n; i++){
         if (i % 2 !== 0){
             sum+=i;
         } 
+        console.log(sum)
     }
 
     return sum
 }
+
+onlyOdds(5)
 

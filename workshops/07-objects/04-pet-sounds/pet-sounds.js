@@ -38,3 +38,7 @@ let animalNoises = [
 ];
 
 // YOUR CODE BELOW
+
+const petSounds = (name, country) => {
+  
+}

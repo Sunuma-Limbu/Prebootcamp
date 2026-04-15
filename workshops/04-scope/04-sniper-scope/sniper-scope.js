@@ -49,6 +49,7 @@ function jaws(agent) {
 
 function elChiffre() {
   let agent = bond;
+  console.log(agent)
   bond = 'Body Double';
 
   let AgentinScope = (agent === '007');
@@ -56,3 +57,6 @@ function elChiffre() {
 
   return AgentinScope === prediction;
 }
+
+jaws()
+elChiffre()
