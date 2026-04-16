@@ -38,3 +38,23 @@ let classRoom = [
 ];
 
 // YOUR CODE BELOW
+
+const attendanceCheck = (day) => {
+    let result = [];
+
+    for (let student of classRoom) {
+
+        let name = Object.keys(student)[0]
+        let days = student[name]
+
+
+        for (let d of days) {
+            if (d[day] === true) {
+                result.push(name)
+            }
+        }
+    }
+
+    return result;
+};
+

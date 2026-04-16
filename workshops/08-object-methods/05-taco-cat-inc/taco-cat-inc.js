@@ -19,7 +19,39 @@ let tacoCatInc = {
     'treat dust': {cost: 0.1, quantity: 100}
   },
 
-  cash: 0
+  cash: 0,
+
+  currentInventory(){
+    let total = 0;
+
+    for (let category in this) {
+      if (typeof this[category] === 'object') {
+        for (let item in this[category]) {
+          let product = this[category][item];
+          total += product.cost * product.quantity;
+        }
+      }
+    }
+
+    return total;
+  },
+  sale(order) {
+    let total = 0;
+
+    for (let category in order) {
+      let itemName = order[category];
+
+      let product = this[category][itemName];
+
+      total += product.cost;
+
+      product.quantity -= 1;
+    }
+
+    this.cash += total;
+
+    return total;
+  }
 };
 
 // YOUR CODE BELOW

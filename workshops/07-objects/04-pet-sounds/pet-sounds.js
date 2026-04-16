@@ -40,5 +40,17 @@ let animalNoises = [
 // YOUR CODE BELOW
 
 const petSounds = (name, country) => {
-  
+  for (let pet in animalNoises) {
+    let petObj = animalNoises[pet]
+    if (petObj[name]) {
+      let countries = petObj[name]
+      for (let c in countries) {
+        if (c.toLowerCase() === country.toLowerCase()) {
+          return `${name[0].toUpperCase() + name.slice(1)}s in ${c} say ${countries[c]}`
+        }
+      }
+    }
+  }
 }
+
+petSounds('dog', 'America')
